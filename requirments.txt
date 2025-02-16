@@ -1,0 +1,11 @@
+transformers
+torch
+llama_index
+llama_index-embeddings-huggingface
+llama_index-embeddings-huggingface-optimum
+POT
+openai
+pytrec_eval
+typing
+logging
+tqdm
