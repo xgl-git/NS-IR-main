@@ -16,7 +16,6 @@ model_path = args.model_path
 device = args.device
 Settings.embed_model = HuggingFaceEmbedding(model_name = model_path, device = device)
 
-# c_predicates, c_premises, q_predicates, q_premises = get_predicate_premise(args)
 
 texts = []
 corpus_dict = {}
