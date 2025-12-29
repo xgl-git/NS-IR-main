@@ -56,7 +56,6 @@ class GenericDataLoader:
             logger.info("Query Example: %s", list(self.queries.values())[0])
 
         return self.corpus, self.queries, self.qrels
-
     def load(self, split="test") -> Tuple[Dict[str, Dict[str, str]], Dict[str, str], Dict[str, Dict[str, int]]]:
 
         self.qrels_file = os.path.join(self.qrels_folder, split + ".tsv")
@@ -93,7 +92,6 @@ class GenericDataLoader:
             logger.info("Doc Example: %s", list(self.corpus.values())[0])
 
         return self.corpus
-
     def _load_corpus(self):
 
         num_lines = sum(1 for i in open(self.corpus_file, 'rb'))
