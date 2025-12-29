@@ -22,11 +22,6 @@ def compute_weights_uniform(s1_word_embeddigs, s2_word_embeddigs):
     s1_weights = torch.ones(s1_word_embeddigs.shape[0], dtype=torch.float64, device='cuda')
     s2_weights = torch.ones(s2_word_embeddigs.shape[0], dtype=torch.float64, device='cuda')
 
-
-    # # Uniform weights to make L2 norm=1
-    # s1_weights /= torch.linalg.norm(s1_weights)
-    # s2_weights /= torch.linalg.norm(s2_weights)
-
     return s1_weights, s2_weights
 def compute_distance_matrix_cosine(s1_word_embeddigs, s2_word_embeddigs, distortion_ratio):
     C = (torch.matmul(F.normalize(s1_word_embeddigs), F.normalize(s2_word_embeddigs).t()) + 1.0) / 2  # Range 0-1
